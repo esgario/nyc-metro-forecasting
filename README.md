@@ -32,3 +32,9 @@ Activate your virtual environment and install the requirements by running the fo
 ```bash
 pip install -r requirements.txt
 ```
+
+## Notebooks
+
+[Exploratory Data Analysis](https://nbviewer.org/github/esgario/nyc-metro-forecasting/blob/main/1_exploratory_data_analysis.ipynb)
+
+[Forecasting](https://nbviewer.org/github/esgario/nyc-metro-forecasting/blob/main/2_forecasting.ipynb)

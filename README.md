@@ -2,6 +2,11 @@
 
 Exploratory Data Analysis and Forecasting of the NYC Metro Dataset
 
+## Notebooks
+
+[Exploratory Data Analysis](https://nbviewer.org/github/esgario/nyc-metro-forecasting/blob/main/1_exploratory_data_analysis.ipynb)
+
+[Forecasting](https://nbviewer.org/github/esgario/nyc-metro-forecasting/blob/main/2_forecasting.ipynb)
 
 ## Download Dataset
 
@@ -32,9 +37,3 @@ Activate your virtual environment and install the requirements by running the fo
 ```bash
 pip install -r requirements.txt
 ```
-
-## Notebooks
-
-[Exploratory Data Analysis](https://nbviewer.org/github/esgario/nyc-metro-forecasting/blob/main/1_exploratory_data_analysis.ipynb)
-
-[Forecasting](https://nbviewer.org/github/esgario/nyc-metro-forecasting/blob/main/2_forecasting.ipynb)

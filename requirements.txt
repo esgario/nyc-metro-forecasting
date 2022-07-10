@@ -6,4 +6,5 @@ ipywidgets==7.7.1
 seaborn==0.11.2
 scikit-learn==1.0.2
 xgboost==1.6.1
+fastparquet==0.8.1
 ipykernel

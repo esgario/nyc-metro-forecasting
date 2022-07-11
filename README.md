@@ -4,9 +4,9 @@ Exploratory Data Analysis and Forecasting of the NYC Metro Dataset
 
 ## Notebooks
 
-[Exploratory Data Analysis](https://nbviewer.org/github/esgario/nyc-metro-forecasting/blob/main/1_exploratory_data_analysis.ipynb)
+[Exploratory Data Analysis](https://nbviewer.org/github/esgario/nyc-metro-forecasting/blob/v0/1_exploratory_data_analysis.ipynb)
 
-[Forecasting](https://nbviewer.org/github/esgario/nyc-metro-forecasting/blob/main/2_forecasting.ipynb)
+[Forecasting](https://nbviewer.org/github/esgario/nyc-metro-forecasting/blob/v0/2_forecasting.ipynb)
 
 ## Download Dataset
 

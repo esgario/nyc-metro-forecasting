@@ -32,8 +32,17 @@ nyc-metro-forecasting/
 
 ## Installing Requirements
 
-Activate your virtual environment and install the requirements by running the following command:
+Activate your virtual environment and install the requirements by running the following commands:
 
 ```bash
+pip install -U pip wheel setuptools
 pip install -r requirements.txt
+```
+
+## Web APP
+
+I've created a simple web app to visualize and forecast the NYC Metro dataset. You can access it by running the following command:
+
+```bash
+streamlit run app/run.py
 ```

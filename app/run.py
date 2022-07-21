@@ -38,44 +38,43 @@ with st.sidebar:
     submitted = False
     df_st, df_ln, df = load_data()
 
-    with st.form("my_form"):
-        
-        # <selectbox>
-        dataset = st.selectbox("Forecasting by", ("Total traffic", "Station", "Line name"))
+    # <selectbox>
+    dataset = st.selectbox("Forecasting by", ("Total traffic", "Station", "Line name"))
 
-        # <selectbox>
-        if dataset == "Station":
-            option = st.selectbox("Select a station", df_st.station.unique())
-            df = df_st.loc[df_st.station == option]
+    # <selectbox>
+    if dataset == "Station":
+        option = st.selectbox("Select a station", df_st.station.unique())
+        df = df_st.loc[df_st.station == option]
 
-        elif dataset == "Line name":
-            option = st.selectbox("Select a line", df_ln.linename.unique())
-            df = df_ln.loc[df_ln.linename == option]
+    elif dataset == "Line name":
+        option = st.selectbox("Select a line", df_ln.linename.unique())
+        df = df_ln.loc[df_ln.linename == option]
 
-        # <selectbox>
-        train_dt_interval = st.selectbox(
-            "Training dataset", ("2015-2017", "2013-2017", "2010-2017 (All Data)")
-        )
-        show_warning = True
+    # <selectbox>
+    train_dt_interval = st.selectbox(
+        "Training dataset", ("2015-2017", "2013-2017", "2010-2017 (All Data)")
+    )
+    show_warning = True
 
-        if train_dt_interval == "2015-2017":
-            df = df.loc[df.datetime >= "2015-01-01"]
-            show_warning = False
+    if train_dt_interval == "2015-2017":
+        df = df.loc[df.datetime >= "2015-01-01"]
+        show_warning = False
 
-        elif train_dt_interval == "2013-2017":
-            df = df.loc[df.datetime >= "2013-01-01"]
+    elif train_dt_interval == "2013-2017":
+        df = df.loc[df.datetime >= "2013-01-01"]
 
-        if show_warning:
-            st.warning("obs: large datasets can take a long time to train.")
+    if show_warning:
+        st.warning("obs: large datasets can take a long time to train.")
 
-        # <selectbox>
-        days = int(st.selectbox("Days to predict", ("30", "90", "180", "365"), index=3))
+    # <selectbox>
+    days = int(st.selectbox("Days to predict", ("30", "90", "180", "365"), index=3))
 
-        # <selectbox>
-        methods = st.multiselect("Methods", ["Prophet", "XGBoost"], ["Prophet", "XGBoost"])
+    # <selectbox>
+    methods = st.multiselect("Methods", ["Prophet", "XGBoost"], ["Prophet", "XGBoost"])
 
-        # <submit>
-        submitted = st.form_submit_button("Run")
+    # <submit>
+    submitted = st.button("Run")
+
 
 if submitted:
     with st.spinner(text="Forecasting..."):

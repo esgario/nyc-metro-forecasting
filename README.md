@@ -41,8 +41,13 @@ pip install -r requirements.txt
 
 ## Web APP
 
-I've created a simple web app to visualize and forecast the NYC Metro dataset. You can access it by running the following command:
+I've created a simple web app to visualize and forecast the NYC Metro dataset. You can access it by locally running the following command:
 
 ```bash
 streamlit run app/run.py
 ```
+
+or you can access the online version by clicking in the link below. But bear in mind that the online version may take a while to train the models.
+
+[https://nycapp01a.herokuapp.com/](https://nycapp01a.herokuapp.com/)
+

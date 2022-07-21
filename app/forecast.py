@@ -11,6 +11,7 @@ def make_forecast_prophet(df, days_to_predict):
     Make a forecast using Prophet.
     """
     model = Prophet(seasonality_mode="multiplicative")
+    model.add_country_holidays(country_name="US")
     model.fit(df.rename(columns={"datetime": "ds", "traffic": "y"}))
     future = model.make_future_dataframe(periods=days_to_predict)
     forecast = model.predict(future)
